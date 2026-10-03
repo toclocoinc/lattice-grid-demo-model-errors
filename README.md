@@ -17,7 +17,7 @@ The page shows where it is wrong and for whom.
   so they redraw for whatever the grid shows. All rows: AUC 0.927. Female: 0.945.
   Age 55+: 0.894 (the same numbers `sklearn.metrics.roc_auc_score` gives).
 
-Library: `@toclocoinc/lattice-grid@1.85.0` from jsDelivr. Keyless, no analytics.
+Library: `@toclocoinc/lattice-grid@1.86.1` from jsDelivr. Keyless, no analytics.
 `?theme=dark` for dark.
 
 ## Run locally
@@ -43,7 +43,12 @@ Accuracy on the test split: 0.8732.
     .venv/bin/python tools/predict.py         # rewrites data/adult-predictions.json
     tools/check-repro.sh                      # re-runs it and compares sha256
 
-## Known grid issue
 
-The precision-recall chart's `AP` label shows the positive rate, not average precision
-(F-1624-1, filed with the grid team). The curve is right; read the label with that in mind.
+## Check it
+
+    node tools/verify.mjs [--shots dir]     # Node 22+, real headless Chrome; checks AUC, AP, label contrast, console
+
+## Licence
+
+Demo code: MIT, see `LICENSE`. Lattice Grid is loaded from the CDN under its own licence; the page carries the
+public-demo licence for `toclocoinc.github.io`, so no watermark shows there.

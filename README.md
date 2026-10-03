@@ -17,7 +17,7 @@ The page shows where it is wrong and for whom.
   so they redraw for whatever the grid shows. All rows: AUC 0.927. Female: 0.945.
   Age 55+: 0.894 (the same numbers `sklearn.metrics.roc_auc_score` gives).
 
-Library: `@toclocoinc/lattice-grid@1.86.1` from jsDelivr. Keyless, no analytics.
+Library: `@toclocoinc/lattice-grid@1.86.2` from jsDelivr. Keyless, no analytics.
 `?theme=dark` for dark.
 
 ## Run locally

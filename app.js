@@ -7,7 +7,7 @@ const dark = document.documentElement.dataset.theme === 'dark';
 el('version').textContent = LatticeGrid.getVersion ? LatticeGrid.getVersion() : '';
 const FIELDS = ['sex', 'race', 'age_band', 'education', 'marital_status', 'occupation'];
 
-const rows = await (await fetch('data/adult-predictions.json?v=20261003p')).json();
+const rows = await (await fetch('data/adult-predictions.json?v=20261003t')).json();
 
 // Error = score - truth, in [-1, 1]: blue (missed a >50K), neutral, red (false alarm).
 const errorScale = { min: -1, max: 1, mid: 0, colours: dark ? ['#3b7bd8', '#2a2f33', '#d8503b'] : ['#4f8fe0', '#f6f6f6', '#e0674f'] };

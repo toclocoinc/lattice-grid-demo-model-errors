@@ -51,7 +51,7 @@ try {
     const ages = await page.evaluate(() => [...document.querySelectorAll('#seg option')].map((o) => o.value));
     const old = await read('age_band', ages.find((v) => /55/.test(v)));
     const num = (r, k) => Number((r[k]?.text.match(/-?\d*\.\d+/) || [])[0]);
-    check(all.version === '1.86.2', `${theme}: grid is 1.86.2`, all.version);
+    check(all.version === '1.86.3', `${theme}: grid is 1.86.3`, all.version);
     check(num(all, 'roc') === 0.927 && num(f, 'roc') === 0.945 && num(old, 'roc') === 0.894, `${theme}: ROC AUC all/Female/55+ = 0.927/0.945/0.894`, [all, f, old].map((r) => r.roc?.text).join(' | '));
     check(num(all, 'pr') === 0.825 && num(f, 'pr') === 0.775, `${theme}: PR AP all/Female = 0.825/0.775 (sklearn average precision)`, [all, f].map((r) => r.pr?.text).join(' | '));
     for (const k of ['roc', 'pr']) {

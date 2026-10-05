@@ -1,6 +1,6 @@
 # Model error analysis on UCI Adult
 
-A [Lattice Grid](https://latticegrid.dev) demo. A gradient-boosted model, trained
+A [Lattice Grid](https://www.latticegrid.dev) demo. A gradient-boosted model, trained
 offline on the UCI Adult training split, scores the 16,281 held-out people.
 The page shows where it is wrong and for whom.
 
@@ -17,7 +17,7 @@ The page shows where it is wrong and for whom.
   so they redraw for whatever the grid shows. All rows: AUC 0.927. Female: 0.945.
   Age 55+: 0.894 (the same numbers `sklearn.metrics.roc_auc_score` gives).
 
-Library: `@toclocoinc/lattice-grid@1.86.4` from jsDelivr. Keyless, no analytics.
+Library: `@toclocoinc/lattice-grid@1.86.7` from jsDelivr. Keyless, no analytics.
 `?theme=dark` for dark.
 
 ## Run locally
